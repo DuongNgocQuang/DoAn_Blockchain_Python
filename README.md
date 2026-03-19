@@ -1,9 +1,8 @@
-[app_blockchain.py](https://github.com/user-attachments/files/26105978/app_blockchain.py)
+[app_blockchain.py](https://github.com/user-attachments/files/26105989/app_blockchain.py)
 from flask import Flask, jsonify, request, render_template_string
 import hashlib
 import time
 
-# --- 1. PHẦN LÕI: THUẬT TOÁN BLOCKCHAIN BẢO MẬT CAO ---
 class BankBlockchain:
     def __init__(self):
         self.chain = []
@@ -66,7 +65,6 @@ class BankBlockchain:
             block_index += 1
         return True
 
-# --- 2. PHẦN MÁY CHỦ WEB & GIAO DIỆN CỰC KHỦNG ---
 app = Flask(__name__)
 blockchain = BankBlockchain()
 
